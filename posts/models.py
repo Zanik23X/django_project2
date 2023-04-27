@@ -1,7 +1,5 @@
 from django.db import models
 from datetime import datetime
-
-# Create your models here.
 class Posts(models.Model):
   title = models.CharField(max_length=200)
   body = models.TextField()
@@ -10,3 +8,8 @@ class Posts(models.Model):
     return self.title
   class Meta:
     verbose_name_plural = "Posts"
+
+from django.db import models
+class Posts(models.Model):
+    id = models.BigAutoField(primary_key=True)
+
